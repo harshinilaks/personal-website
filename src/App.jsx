@@ -20,6 +20,8 @@ import {
 
 const navItems = ['about', 'experience', 'projects', 'skills', 'contact'];
 
+const assetPath = (path) => `${import.meta.env.BASE_URL}${path}`;
+
 const focusAreas = [
   { icon: Code2, label: 'computer science', detail: 'full-stack systems, reliability, and human-centered products' },
   { icon: Pi, label: 'applied math', detail: 'algorithms, abstraction, modeling, and elegant problem solving' },
@@ -27,9 +29,9 @@ const focusAreas = [
 ];
 
 const bakingPhotos = [
-  { src: '/bananabread-cookies.png', alt: 'Banana bread cookies', caption: 'choc chip banana bread cookies' },
-  { src: '/smores-cookies.png', alt: 'S’mores cookies', caption: 'smores cookies filled w melted marshmallows' },
-  { src: '/toasted-coconut.png', alt: 'Toasted coconut bake', caption: 'mini salted coconut choc chip cookies' },
+  { src: assetPath('bananabread-cookies.png'), alt: 'Banana bread cookies', caption: 'choc chip banana bread cookies' },
+  { src: assetPath('smores-cookies.png'), alt: 'S’mores cookies', caption: 'smores cookies filled w melted marshmallows' },
+  { src: assetPath('toasted-coconut.png'), alt: 'Toasted coconut bake', caption: 'mini salted coconut choc chip cookies' },
 ];
 
 const heroDoodles = [
@@ -67,7 +69,7 @@ const experiences = [
   {
     role: 'Software Engineering Intern, Site Reliability Engineering',
     place: 'Verizon',
-    logo: '/verizon.png',
+    logo: assetPath('verizon.png'),
     time: 'Jun. 2025 — Aug. 2025',
     tags: ['Spring Boot', 'Redis', 'Security', 'Testing'],
     points: [
@@ -79,7 +81,7 @@ const experiences = [
   {
     role: 'Undergraduate Researcher',
     place: 'Hein Lab, Cornell University Department of Computational Biology',
-    image: '/heinlab.png',
+    image: assetPath('heinlab.png'),
     time: 'Apr. 2024 — Present',
     tags: ['Python', 'SciPy', 'NumPy', 'Computational Biology'],
     points: [
@@ -92,7 +94,7 @@ const experiences = [
   {
     role: 'Research Assistant',
     place: 'Design & Augmented Intelligence Lab',
-    image: '/dail.png',
+    image: assetPath('dail.png'),
     imagePosition: 'left',
     time: 'Dec. 2024 — Present',
     tags: ['Python', 'OpenCV', 'Pandas', 'VR Data'],
@@ -104,7 +106,7 @@ const experiences = [
   {
     role: 'Project Manager',
     place: 'Cornell Sustainability Consulting',
-    image: '/tourism.png',
+    image: assetPath('tourism.png'),
     time: 'Apr. 2024 — Present',
     tags: ['Data Modeling', 'Dashboards', 'Climate'],
     points: [
@@ -380,7 +382,7 @@ function App() {
               </div>
               <div className="mb-6 overflow-hidden rounded-[1.65rem] border border-midnight/10 bg-white/45 p-2 shadow-soft">
                 <img
-                  src="/harshini-photo.png"
+                  src={assetPath('harshini-photo.png')}
                   alt="Harshini Lakshminarayanan"
                   className="h-[24rem] w-full rounded-[1.25rem] object-cover object-[50%_34%]"
                 />
@@ -416,13 +418,13 @@ function App() {
               <p className="leading-7 text-ink/70">{text}</p>
               {title === 'currently in' && (
                 <div className="mt-5 flex h-[21.75rem] items-center justify-center">
-                  <img src="/apple.jpg" alt="Apple logo" className="max-h-56 max-w-full object-contain" />
+                  <img src={assetPath('apple.jpg')} alt="Apple logo" className="max-h-56 max-w-full object-contain" />
                 </div>
               )}
               {title === 'based in' && <BakingSlideshow />}
               {title === 'what i\'m reading' && (
                 <div className="mt-5 flex h-[17rem] items-center justify-center">
-                  <img src="/book.jpg" alt="A Heartbreaking Work of Staggering Genius by Dave Eggers" className="max-h-full rounded-[1.5rem] object-contain shadow-soft" />
+                  <img src={assetPath('book.jpg')} alt="A Heartbreaking Work of Staggering Genius by Dave Eggers" className="max-h-full rounded-[1.5rem] object-contain shadow-soft" />
                 </div>
               )}
             </div>
