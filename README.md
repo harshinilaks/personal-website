@@ -1,6 +1,5 @@
-# Harshini Lakshminarayanan — Personal Website
+# personal website :)
 
-A React + Tailwind personal website with an indie, polished, tech-forward visual direction.
 
 ## Run locally
 
