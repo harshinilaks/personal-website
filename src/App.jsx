@@ -132,7 +132,7 @@ const projects = [
       'A serverless community donation platform with controlled forms, live UI updates, S3 file uploads, and signed download links.',
   },
   {
-    name: 'Group Theory Visualization Platform',
+    name: 'Abstract Algebra Group Theory Visualization Platform',
     icon: Binary,
     stack: 'React, Node.js, Express, MongoDB',
     link: 'https://github.com/harshinilaks/group-explorer',
